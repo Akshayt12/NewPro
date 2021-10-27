@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="text-align:center;">
+	<h1>Gaurd Login</h1>
+	<form action="glogin" method="post">
+	{% csrf_token %}
+		Username: <input type="text" name="guser"><br><br>
+		Password: <input type="password" name="gpass"><br><br>
+		<input type="submit" value="Login">
+	</form>
+	{{error}}
+</div>
+{% endblock %}

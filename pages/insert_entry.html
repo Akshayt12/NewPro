@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Insert Entry</h1>
+<h3><a href="ghome">Home</a></h3>
+<form action="insert_guest" method="post">
+{% csrf_token %}
+Name: <input type="text" name="gsname"><br><br>
+From: <input type="text" name="gsfrom"><br><br>
+Purpose: <input type="text" name="gspurpose"><br><br>
+<input type="submit" value="Update">
+</form>
+{{info}}
+{% endblock %}

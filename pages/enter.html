@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="text-align:center;">
+	<h1>Insert Entry</h1>
+	<h3><a href="ghome">Home</a></h3>
+	<form action="insert_entry" method="post">
+	{% csrf_token %}
+		Name: <input type="text" name="guest_name" placeholder="enter guest name"><br><br>
+		Purpose: <input type="text" name="purpose" placeholder="purpose"><br><br>
+		Come from: <input type="text" name="comefrom" placeholder="eg. Delhi"><br><br>
+		<input type="submit" value="Entry">
+	</form>
+	{{error}}
+</div>
+{% endblock %}

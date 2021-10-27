@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="text-align:center;">
+	<h1>Create Gaurd Account</h1>
+	<h3><a href="home">Home</a></h3>
+	<form action="create_account" method="post">
+	{% csrf_token %}
+		Username: <input type="text" name="guser" placeholder="enter username"><br><br>
+		First Name: <input type="text" name="gfname" placeholder="enter first name"><br><br>
+		Last Name: <input type="text" name="glname" placeholder="enter last name"><br><br>
+		Password: <input type="password" name="gpass" placeholder="enter password"><br><br>
+		<input type="submit" value="Create">
+	</form>
+	{{error}}
+</div>
+{% endblock %}
